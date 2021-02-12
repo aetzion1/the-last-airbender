@@ -1,6 +1,6 @@
 class AirbenderFacade
   class << self
-    def get_characters
+    def get_characters(nation, limit)
       data = CharacterService.search_by_nation(nation, limit)
 
       if data.is_a? Hash
