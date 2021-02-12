@@ -12,9 +12,9 @@ RSpec.describe "search path" do
 
     expect(page).to have_content("Population: 97")
   
-    expect(page).to have_css(".member", count: 25)
+    expect(page).to have_css(".character", count: 25)
 
-    within(first(".member")) do
+    within(first(".character")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".image")
       expect(page).to have_css(".allies")

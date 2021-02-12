@@ -6,5 +6,14 @@
   <div> Population: <%= @characters.count %>% </div>
 
   <div> A few members: </div>
+  <% @characters.each do |character| %>
+  <ul class="character">
+    <%= image_tag("#{character.photoUrl}", class: "image") %>
+    <li class="name"><%= character.name %></li>
+    <li class="allies">Allies: <%= character.allies[0] %></li>
+    <li class="enemies">Enemies: <%= character.enemies[0] %></li>
+    <li class="affiliations">Affiliation(s): <%= character.affiliation %></li>
+  </ul>
+<% end %>
 
 </body>
