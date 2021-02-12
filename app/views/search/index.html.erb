@@ -7,6 +7,7 @@
 
   <div> A few members: </div>
   <% @characters.each do |character| %>
+  <%# @characters25.each do |character| %>
   <ul class="character">
     <%= image_tag("#{character.photoUrl}", class: "image") %>
     <li class="name"><%= character.name %></li>
