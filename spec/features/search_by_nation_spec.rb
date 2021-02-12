@@ -10,7 +10,7 @@ RSpec.describe "search path" do
     
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_content("Population: 100")
+    expect(page).to have_content("Population: 97")
   
     expect(page).to have_css(".member", count: 25)
 

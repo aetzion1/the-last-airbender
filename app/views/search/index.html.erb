@@ -1,10 +1,9 @@
 <body style=margin:0>
   <header>
-  <% binding.pry %>
-    <h1><%= @characters[0][affiliation] %></h1>
+    <h1><%= @nation %></h1>
   </header>
 
-  <div> Population: </div>
+  <div> Population: <%= @characters.count %>% </div>
 
   <div> A few members: </div>
 

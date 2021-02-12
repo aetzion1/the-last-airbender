@@ -2,9 +2,10 @@ class SearchController < ApplicationController
 
   def index
     session[:nation] = params[:nation].gsub("_", "+")
-    response = Faraday.get("https://last-airbender-api.herokuapp.com/api/v1/characters?affiliation=#{session[:nation]}")
-    data = JSON.parse(response.body, symbolize_names: true)
-    @characters = data[:results].map do |character_info|
+    @nation = params[:nation].gsub("_", " ").titleize
+    response = Faraday.get("https://last-airbender-api.herokuapp.com/api/v1/characters?affiliation=#{session[:nation]}&perPage=200")
+    character_data = JSON.parse(response.body, symbolize_names: true)
+    @characters = character_data.map do |character_info|
       Character.new(character_info)
     end
     # @characters = get_characters(session[:nation])
