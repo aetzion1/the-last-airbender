@@ -112,3 +112,17 @@
 .select-field option {
 	font-weight:normal;
 }
+
+.header {
+  background-image: url('../images/background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: .8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.25em;
+  padding: 10px;
+  height: 90vh;
+  width: 100vw;
+}
