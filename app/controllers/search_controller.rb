@@ -13,8 +13,8 @@ class SearchController < ApplicationController
       Character.new(character_info)
     end
 
-    # @characters = AirbenderFacade.search_by_nation(@nation, 100)
-    # @characters25 = AirbenderFacade.search_by_nation(@nation, 100)
+    # @characters = SearchFacade.search_by_nation(@nation, 100)
+    # @characters25 = SearchFacade.search_by_nation(@nation, 100)
     #
   end
 end
